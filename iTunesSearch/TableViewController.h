@@ -8,11 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TableViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate>
+@interface TableViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+
+@property (strong, nonatomic) IBOutlet UIView *view;
+@property (weak, nonatomic) IBOutlet UITableView *tableview;
+@property (weak, nonatomic) IBOutlet UITextField *label;
+- (IBAction)searchButton:(id)sender;
 
 
-@property (strong, nonatomic) IBOutlet UITableView *tableview;
-@property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
+
+
 
 @end
 

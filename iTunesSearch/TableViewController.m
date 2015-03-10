@@ -15,8 +15,6 @@
     NSArray *midias;
 }
 
-//@property iTunesManager *iTunes;
-
 @end
 
 @implementation TableViewController
@@ -25,21 +23,17 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    [self.tableview setDelegate:self];
+    [self.tableview setDataSource:self];
     UINib *nib = [UINib nibWithNibName:@"TableViewCell" bundle:nil];
     [self.tableview registerNib:nib forCellReuseIdentifier:@"celulaPadrao"];
     
     iTunesManager *itunes = [iTunesManager sharedInstance];
     midias = [itunes buscarMidias:@"Apple"];
     
-#warning Necessario para que a table view tenha um espaco em relacao ao topo, pois caso contrario o texto ficara atras da barra superior
-    self.tableview.tableHeaderView = [[UIView alloc] initWithFrame:CGRectMake(0.0f, 0.0f, self.tableview.bounds.size.width, 15.f)];
+//#warning Necessario para que a table view tenha um espaco em relacao ao topo, pois caso contrario o texto ficara atras da barra superior
+//    self.tableview.tableHeaderView = [[UIView alloc] initWithFrame:CGRectMake(0.0f, 0.0f, self.tableview.bounds.size.width, 15.f)];
 }
-
-//-(void) searchBarSearchButtonClicked:(UISearchBar *)searchBar {
-//    NSLog(@"Teste");
-//    midias = [_iTunes buscarMidias:searchBar.text];
-//}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -69,9 +63,16 @@
     return celula;
 }
 
+
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return 100;
 }
 
 
+- (IBAction)searchButton:(id)sender {
+    iTunesManager *itunes = [iTunesManager sharedInstance];
+    midias = [itunes buscarMidias: _label.text];
+    [self.tableview reloadData];
+    
+}
 @end
