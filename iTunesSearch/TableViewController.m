@@ -15,6 +15,8 @@
     NSArray *midias;
 }
 
+//@property iTunesManager *iTunes;
+
 @end
 
 @implementation TableViewController
@@ -33,6 +35,11 @@
 #warning Necessario para que a table view tenha um espaco em relacao ao topo, pois caso contrario o texto ficara atras da barra superior
     self.tableview.tableHeaderView = [[UIView alloc] initWithFrame:CGRectMake(0.0f, 0.0f, self.tableview.bounds.size.width, 15.f)];
 }
+
+//-(void) searchBarSearchButtonClicked:(UISearchBar *)searchBar {
+//    NSLog(@"Teste");
+//    midias = [_iTunes buscarMidias:searchBar.text];
+//}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -56,12 +63,14 @@
     
     [celula.nome setText:filme.nome];
     [celula.tipo setText:@"Filme"];
+    [celula.genero setText:filme.genero];
+    [celula.preco setText:[NSString stringWithFormat:@"Preço: %@", filme.preco]];
     
     return celula;
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 70;
+    return 100;
 }
 
 
