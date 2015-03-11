@@ -17,6 +17,10 @@
 		92C21CE11AAE76930052ABE6 /* TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 92C21CDF1AAE76930052ABE6 /* TableViewCell.m */; };
 		92C21CE21AAE76930052ABE6 /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92C21CE01AAE76930052ABE6 /* TableViewCell.xib */; };
 		92C21CE81AAE858E0052ABE6 /* Filme.m in Sources */ = {isa = PBXBuildFile; fileRef = 92C21CE71AAE858E0052ABE6 /* Filme.m */; };
+		B26A0E831AB0C68800B9D678 /* Ebook.m in Sources */ = {isa = PBXBuildFile; fileRef = B26A0E7C1AB0C68800B9D678 /* Ebook.m */; };
+		B26A0E841AB0C68800B9D678 /* Filme.m in Sources */ = {isa = PBXBuildFile; fileRef = B26A0E7E1AB0C68800B9D678 /* Filme.m */; };
+		B26A0E851AB0C68800B9D678 /* Musica.m in Sources */ = {isa = PBXBuildFile; fileRef = B26A0E801AB0C68800B9D678 /* Musica.m */; };
+		B26A0E861AB0C68800B9D678 /* Podcast.m in Sources */ = {isa = PBXBuildFile; fileRef = B26A0E821AB0C68800B9D678 /* Podcast.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +53,14 @@
 		92C21CE01AAE76930052ABE6 /* TableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
 		92C21CE61AAE858E0052ABE6 /* Filme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Filme.h; path = Entidades/Filme.h; sourceTree = "<group>"; };
 		92C21CE71AAE858E0052ABE6 /* Filme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Filme.m; path = Entidades/Filme.m; sourceTree = "<group>"; };
+		B26A0E7B1AB0C68800B9D678 /* Ebook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Ebook.h; path = Entidades/Ebook.h; sourceTree = "<group>"; };
+		B26A0E7C1AB0C68800B9D678 /* Ebook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Ebook.m; path = Entidades/Ebook.m; sourceTree = "<group>"; };
+		B26A0E7D1AB0C68800B9D678 /* Filme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Filme.h; path = Entidades/Filme.h; sourceTree = "<group>"; };
+		B26A0E7E1AB0C68800B9D678 /* Filme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Filme.m; path = Entidades/Filme.m; sourceTree = "<group>"; };
+		B26A0E7F1AB0C68800B9D678 /* Musica.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Musica.h; path = Entidades/Musica.h; sourceTree = "<group>"; };
+		B26A0E801AB0C68800B9D678 /* Musica.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Musica.m; path = Entidades/Musica.m; sourceTree = "<group>"; };
+		B26A0E811AB0C68800B9D678 /* Podcast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Podcast.h; path = Entidades/Podcast.h; sourceTree = "<group>"; };
+		B26A0E821AB0C68800B9D678 /* Podcast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Podcast.m; path = Entidades/Podcast.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +157,14 @@
 			isa = PBXGroup;
 			children = (
 				92C21CE61AAE858E0052ABE6 /* Filme.h */,
+				B26A0E7B1AB0C68800B9D678 /* Ebook.h */,
+				B26A0E7C1AB0C68800B9D678 /* Ebook.m */,
+				B26A0E7D1AB0C68800B9D678 /* Filme.h */,
+				B26A0E7E1AB0C68800B9D678 /* Filme.m */,
+				B26A0E7F1AB0C68800B9D678 /* Musica.h */,
+				B26A0E801AB0C68800B9D678 /* Musica.m */,
+				B26A0E811AB0C68800B9D678 /* Podcast.h */,
+				B26A0E821AB0C68800B9D678 /* Podcast.m */,
 				92C21CE71AAE858E0052ABE6 /* Filme.m */,
 			);
 			name = Entidades;
@@ -250,12 +270,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B26A0E861AB0C68800B9D678 /* Podcast.m in Sources */,
 				92C21CBC1AAE757A0052ABE6 /* TableViewController.m in Sources */,
 				92C21CDB1AAE75B30052ABE6 /* iTunesManager.m in Sources */,
 				92C21CB91AAE757A0052ABE6 /* AppDelegate.m in Sources */,
 				92C21CE81AAE858E0052ABE6 /* Filme.m in Sources */,
 				92C21CE11AAE76930052ABE6 /* TableViewCell.m in Sources */,
 				92C21CB61AAE757A0052ABE6 /* main.m in Sources */,
+				B26A0E831AB0C68800B9D678 /* Ebook.m in Sources */,
+				B26A0E851AB0C68800B9D678 /* Musica.m in Sources */,
+				B26A0E841AB0C68800B9D678 /* Filme.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
