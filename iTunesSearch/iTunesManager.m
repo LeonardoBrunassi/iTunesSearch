@@ -7,10 +7,10 @@
 //
 
 #import "iTunesManager.h"
-#import "Entidades/Filme.h"
-#import "Entidades/Musica.h"
-#import "Entidades/Podcast.h"
-#import "Entidades/Ebook.h"
+#import "Filme.h"
+#import "Musica.h"
+#import "Podcast.h"
+#import "Ebook.h"
 
 
 @implementation iTunesManager
@@ -56,6 +56,7 @@ static bool isFirstAccess = YES;
     NSMutableArray *podcasts = [[NSMutableArray alloc] init];
     NSMutableArray *ebooks = [[NSMutableArray alloc] init];
     
+    NSMutableArray *total;
     for (NSDictionary *item in resultados) {
         
         if ([[item objectForKey:@"kind"] isEqualToString:@"feature-movie"]) {
@@ -108,14 +109,13 @@ static bool isFirstAccess = YES;
         }
         
         
+        total = [[NSMutableArray alloc] initWithObjects:filmes,musicas,podcasts,ebooks, nil];
 
         
         
-        Musica *musica = [[Musica alloc] init];
-        
     }
     
-    return filmes;
+    return total;
 }
 
 
