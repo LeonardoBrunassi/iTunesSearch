@@ -19,6 +19,8 @@
 		B26A0E831AB0C68800B9D678 /* Ebook.m in Sources */ = {isa = PBXBuildFile; fileRef = B26A0E7C1AB0C68800B9D678 /* Ebook.m */; };
 		B26A0E851AB0C68800B9D678 /* Musica.m in Sources */ = {isa = PBXBuildFile; fileRef = B26A0E801AB0C68800B9D678 /* Musica.m */; };
 		B26A0E861AB0C68800B9D678 /* Podcast.m in Sources */ = {isa = PBXBuildFile; fileRef = B26A0E821AB0C68800B9D678 /* Podcast.m */; };
+		B2BC4A4A1AB35B380032C30D /* Detalhes.m in Sources */ = {isa = PBXBuildFile; fileRef = B2BC4A481AB35B380032C30D /* Detalhes.m */; };
+		B2BC4A4B1AB35B380032C30D /* Detalhes.xib in Resources */ = {isa = PBXBuildFile; fileRef = B2BC4A491AB35B380032C30D /* Detalhes.xib */; };
 		B2FA45F91AB0D4AE0027520A /* Filme.m in Sources */ = {isa = PBXBuildFile; fileRef = B26A0E881AB0D2C100B9D678 /* Filme.m */; };
 /* End PBXBuildFile section */
 
@@ -62,6 +64,9 @@
 		B26A0E811AB0C68800B9D678 /* Podcast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Podcast.h; path = Entidades/Podcast.h; sourceTree = "<group>"; };
 		B26A0E821AB0C68800B9D678 /* Podcast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Podcast.m; path = Entidades/Podcast.m; sourceTree = "<group>"; };
 		B26A0E881AB0D2C100B9D678 /* Filme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Filme.m; path = Entidades/Filme.m; sourceTree = "<group>"; };
+		B2BC4A471AB35B380032C30D /* Detalhes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Detalhes.h; path = ../Detalhes.h; sourceTree = "<group>"; };
+		B2BC4A481AB35B380032C30D /* Detalhes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Detalhes.m; path = ../Detalhes.m; sourceTree = "<group>"; };
+		B2BC4A491AB35B380032C30D /* Detalhes.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = Detalhes.xib; path = ../Detalhes.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +171,9 @@
 				B26A0E801AB0C68800B9D678 /* Musica.m */,
 				B26A0E811AB0C68800B9D678 /* Podcast.h */,
 				B26A0E821AB0C68800B9D678 /* Podcast.m */,
+				B2BC4A471AB35B380032C30D /* Detalhes.h */,
+				B2BC4A481AB35B380032C30D /* Detalhes.m */,
+				B2BC4A491AB35B380032C30D /* Detalhes.xib */,
 			);
 			name = Entidades;
 			sourceTree = "<group>";
@@ -253,6 +261,7 @@
 				92C21CC11AAE757A0052ABE6 /* Images.xcassets in Resources */,
 				92C21CE21AAE76930052ABE6 /* TableViewCell.xib in Resources */,
 				B2234AEA1AB0DD2C003C642F /* TableView.xib in Resources */,
+				B2BC4A4B1AB35B380032C30D /* Detalhes.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,6 +280,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B26A0E861AB0C68800B9D678 /* Podcast.m in Sources */,
+				B2BC4A4A1AB35B380032C30D /* Detalhes.m in Sources */,
 				92C21CBC1AAE757A0052ABE6 /* TableViewController.m in Sources */,
 				92C21CDB1AAE75B30052ABE6 /* iTunesManager.m in Sources */,
 				92C21CB91AAE757A0052ABE6 /* AppDelegate.m in Sources */,

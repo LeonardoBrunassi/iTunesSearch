@@ -28,7 +28,11 @@
 #warning Adicionado codigo para iniciar com a interface do TableView
 //    TableViewController *tvc = [[TableViewController alloc] initWithNibName:@"TableView" bundle:nil];
     TableViewController *tvc = [[TableViewController alloc] init];
-    [self.window setRootViewController:tvc];
+    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:tvc];
+    [[self window] setRootViewController:navController];
+    
+    
+    //[self.window setRootViewController:tvc];
     [self.window makeKeyAndVisible];
     return YES;
 }

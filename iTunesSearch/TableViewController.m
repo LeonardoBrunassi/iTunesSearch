@@ -13,10 +13,10 @@
 #import "Ebook.h"
 #import "Musica.h"
 #import "Podcast.h"
+#import "Detalhes.h"
 
 @interface TableViewController () {
     NSArray *midias;
-    NSArray *mid;
 }
 
 @end
@@ -47,8 +47,8 @@
 
 #pragma mark - Metodos do UITableViewDataSource
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return [midias count];
-    //return 4;
+    //return [midias count];
+    return 4;
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -141,10 +141,19 @@
     return 100;
 }
 
+-(void) tableView: (UITableView *) tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    Detalhes *det = [[Detalhes alloc] init];
+    det.row = [indexPath row];
+    det.section = [indexPath section];
+    [[self navigationController] pushViewController:det animated:YES];
+    
+}
+
 
 - (IBAction)searchButton:(id)sender {
     iTunesManager *itunes = [iTunesManager sharedInstance];
-    midias = [itunes buscarMidias: _label.text];
+    NSString *espaco = [_label.text stringByReplacingOccurrencesOfString:@" " withString:@"+"];
+    midias = [itunes buscarMidias: espaco];
     [self.tableview reloadData];
     
 }

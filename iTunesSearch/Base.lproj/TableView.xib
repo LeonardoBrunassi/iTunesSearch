@@ -16,21 +16,20 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="fjW-wR-tlI">
-                    <rect key="frame" x="0.0" y="43" width="600" height="600"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                </tableView>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kzS-PI-y08">
-                    <rect key="frame" x="8" y="20" width="235" height="30"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="235" id="VDr-wQ-fH9"/>
-                        <constraint firstAttribute="height" constant="30" id="dUW-O7-OcP"/>
-                    </constraints>
+                    <rect key="frame" x="8" y="100" width="235" height="30"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="fjW-wR-tlI">
+                    <rect key="frame" x="0.0" y="172" width="600" height="600"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                        <rect key="frame" x="0.0" y="160" width="400" height="550"/>
+                    </variation>
+                </tableView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mYm-HL-Wp0">
-                    <rect key="frame" x="261" y="20" width="48" height="30"/>
+                    <rect key="frame" x="261" y="100" width="48" height="30"/>
                     <state key="normal" title="Search">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
@@ -41,11 +40,42 @@
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="mYm-HL-Wp0" firstAttribute="leading" secondItem="kzS-PI-y08" secondAttribute="trailing" constant="18" id="BmW-VI-WUY"/>
-                <constraint firstItem="mYm-HL-Wp0" firstAttribute="top" secondItem="fQO-Iq-j4F" secondAttribute="top" constant="20" id="Nc7-Je-Ht6"/>
-                <constraint firstItem="kzS-PI-y08" firstAttribute="leading" secondItem="fQO-Iq-j4F" secondAttribute="leading" constant="8" id="qsv-eO-2h3"/>
-                <constraint firstItem="kzS-PI-y08" firstAttribute="top" secondItem="fQO-Iq-j4F" secondAttribute="top" constant="20" id="s9F-fS-Yec"/>
+                <constraint firstAttribute="bottom" secondItem="fjW-wR-tlI" secondAttribute="bottom" id="BAT-fm-Tof"/>
+                <constraint firstItem="fjW-wR-tlI" firstAttribute="leading" secondItem="fQO-Iq-j4F" secondAttribute="leading" id="JD6-Qw-VoX"/>
+                <constraint firstItem="fjW-wR-tlI" firstAttribute="top" secondItem="mYm-HL-Wp0" secondAttribute="bottom" constant="30" id="UhL-iu-JfU"/>
+                <constraint firstAttribute="trailing" secondItem="kzS-PI-y08" secondAttribute="trailing" constant="155" id="X0E-Lu-h8k"/>
+                <constraint firstItem="kzS-PI-y08" firstAttribute="leading" secondItem="fQO-Iq-j4F" secondAttribute="leading" constant="10" id="aUA-WG-z27"/>
+                <constraint firstItem="mYm-HL-Wp0" firstAttribute="top" secondItem="fQO-Iq-j4F" secondAttribute="top" constant="100" id="ayI-QY-66F"/>
+                <constraint firstItem="kzS-PI-y08" firstAttribute="top" secondItem="fQO-Iq-j4F" secondAttribute="top" constant="100" id="q9l-CS-iKm"/>
+                <constraint firstAttribute="trailing" secondItem="fjW-wR-tlI" secondAttribute="trailing" id="qKQ-Lr-z6B"/>
+                <constraint firstItem="mYm-HL-Wp0" firstAttribute="leading" secondItem="kzS-PI-y08" secondAttribute="trailing" constant="16" id="sSB-9a-oz5"/>
             </constraints>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="X0E-Lu-h8k"/>
+                    <exclude reference="aUA-WG-z27"/>
+                    <exclude reference="q9l-CS-iKm"/>
+                    <exclude reference="BAT-fm-Tof"/>
+                    <exclude reference="JD6-Qw-VoX"/>
+                    <exclude reference="UhL-iu-JfU"/>
+                    <exclude reference="qKQ-Lr-z6B"/>
+                    <exclude reference="ayI-QY-66F"/>
+                    <exclude reference="sSB-9a-oz5"/>
+                </mask>
+            </variation>
+            <variation key="heightClass=regular-widthClass=compact">
+                <mask key="constraints">
+                    <include reference="X0E-Lu-h8k"/>
+                    <include reference="aUA-WG-z27"/>
+                    <include reference="q9l-CS-iKm"/>
+                    <include reference="BAT-fm-Tof"/>
+                    <include reference="JD6-Qw-VoX"/>
+                    <include reference="UhL-iu-JfU"/>
+                    <include reference="qKQ-Lr-z6B"/>
+                    <include reference="ayI-QY-66F"/>
+                    <include reference="sSB-9a-oz5"/>
+                </mask>
+            </variation>
             <point key="canvasLocation" x="-126" y="453"/>
         </view>
     </objects>

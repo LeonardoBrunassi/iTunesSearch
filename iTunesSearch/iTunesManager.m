@@ -15,11 +15,15 @@
 
 @implementation iTunesManager
 
+
+
 static iTunesManager *SINGLETON = nil;
 
 static bool isFirstAccess = YES;
 
 #pragma mark - Public Method
+
+@synthesize total;
 
 + (id)sharedInstance
 {
@@ -56,7 +60,7 @@ static bool isFirstAccess = YES;
     NSMutableArray *podcasts = [[NSMutableArray alloc] init];
     NSMutableArray *ebooks = [[NSMutableArray alloc] init];
     
-    NSMutableArray *total;
+    
     for (NSDictionary *item in resultados) {
         
         if ([[item objectForKey:@"kind"] isEqualToString:@"feature-movie"]) {
@@ -109,12 +113,9 @@ static bool isFirstAccess = YES;
         }
         
         
-        total = [[NSMutableArray alloc] initWithObjects:filmes,musicas,podcasts,ebooks, nil];
-
-        
-        
     }
     
+    total = [[NSArray alloc] initWithObjects:filmes,musicas,podcasts,ebooks, nil];
     return total;
 }
 
