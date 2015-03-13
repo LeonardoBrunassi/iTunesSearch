@@ -47,57 +47,93 @@
 
 #pragma mark - Metodos do UITableViewDataSource
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 1;
+    return [midias count];
+    //return 4;
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [midias count];
+    return [[midias objectAtIndex:section] count];
+    
+}
+
+-(NSString *) tableView:(UITableView *) tableView titleForHeaderInSection:(NSInteger)section {
+    switch (section) {
+        case 0:
+            return @"filmes";
+            break;
+        case 1:
+            return @"ebooks";
+            break;
+        case 2:
+            return @"musicas";
+            break;
+        case 3:
+            return @"podcasts";
+            break;
+            
+        default:
+            return nil;
+            break;
+            
+    }
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     TableViewCell *celula = [self.tableview dequeueReusableCellWithIdentifier:@"celulaPadrao"];
     
-    mid = [[NSArray alloc] initWithArray:[midias objectAtIndex:indexPath.section]];
+    //mid = [[NSArray alloc] initWithArray:[midias objectAtIndex:indexPath.section]];
     
+
     Filme *filme = [[Filme alloc] init];
     Ebook *ebook= [[Ebook alloc] init];;
     Musica *musica= [[Musica alloc] init];;
     Podcast *podcast= [[Podcast alloc] init];;
     
-    long row = [indexPath row];
+    //long row = [indexPath row];
     
     switch (indexPath.section) {
         case 0:
-            filme = [mid objectAtIndex:row];
+            filme = [[midias objectAtIndex:indexPath.section]objectAtIndex:indexPath.row];
+            //filme = [mid objectAtIndex:row];
             [celula.nome setText:filme.nome];
             [celula.tipo setText:@"Filme"];
             [celula.genero setText:filme.genero];
             [celula.preco setText:[NSString stringWithFormat:@"Preço: %@", filme.preco]];
+            return celula;
             break;
         case 1:
-            ebook = [mid objectAtIndex:row];
+            ebook = [[midias objectAtIndex:indexPath.section]objectAtIndex:indexPath.row];
+            //ebook = [mid objectAtIndex:row];
             [celula.nome setText:ebook.nome];
             [celula.tipo setText:@"Ebook"];
             [celula.genero setText:ebook.genero];
             [celula.preco setText:[NSString stringWithFormat:@"Preço: %@", ebook.preco]];
+            return celula;
             break;
         case 2:
-            musica = [mid objectAtIndex:row];
+            musica = [[midias objectAtIndex:indexPath.section]objectAtIndex:indexPath.row];
+            //musica = [mid objectAtIndex:row];
             [celula.nome setText:musica.nome];
             [celula.tipo setText:@"Musica"];
             [celula.genero setText:musica.genero];
             [celula.preco setText:[NSString stringWithFormat:@"Preço: %@", musica.preco]];
+            return celula;
             break;
         case 3:
-            podcast = [mid objectAtIndex:row];
+            podcast = [[midias objectAtIndex:indexPath.section]objectAtIndex:indexPath.row];
+            //podcast = [mid objectAtIndex:row];
             [celula.nome setText:podcast.nome];
             [celula.tipo setText:@"Podcast"];
             [celula.genero setText:podcast.genero];
             [celula.preco setText:[NSString stringWithFormat:@"Preço: %@", podcast.preco]];
+            return celula;
+            break;
+            
+            default:
             break;
     }
     
-    return celula;
+    return nil;
 }
 
 
